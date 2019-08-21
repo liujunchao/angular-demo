@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "types": ["node"]
+},
+  "angularCompilerOptions": {
+    "trace": true,
+    "strictInjectionParameters": true,
+    "preserveWhitespaces": true,
+    "fullTemplateTypeCheck": true
+  }
+}

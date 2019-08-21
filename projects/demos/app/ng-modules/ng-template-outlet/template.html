@@ -1,0 +1,26 @@
+
+<figure>    
+    <ol>
+        <li>ng-template的ID #name页面唯一</li>
+        <li>ng-template的属性设置模式为 let-propertyName="propertyNameInContext"，其属性值必须在context中可以找到</li>
+    </ol>
+</figure>
+<ng-container *ngTemplateOutlet="greet"></ng-container>
+<hr>
+<ng-container *ngTemplateOutlet="eng; context: myContext"></ng-container>
+<hr>
+<ng-container *ngTemplateOutlet="svk; context: myContext"></ng-container>
+<hr>
+ 
+<ng-container *ngTemplateOutlet="programmer;context:anotherContext"></ng-container>
+
+<ng-template #greet><span>Hello</span></ng-template>
+<ng-template #eng let-name><span>Hello {{name}}!</span></ng-template>
+<ng-template #svk let-person="localSk"><span>Ahoj {{person}}!</span></ng-template>
+<ng-template #programmer let-programmer="name" let-salary="income" let-skills="skills">
+    <span>welcome {{programmer}}, your salary is {{salary}},</span>
+    I have many skills,such as 
+    <span *ngFor="let skill of skills">
+        {{skill}}
+    </span>
+</ng-template>
