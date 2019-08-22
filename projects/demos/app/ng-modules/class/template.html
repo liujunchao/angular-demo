@@ -1,0 +1,20 @@
+<figure>
+  <h5>笔记</h5>
+  <ol>
+    <li>
+      我们使用ng-class定义类的样式，有三种形式：
+      (1)string-有单引号包住并以空格隔开的类名列表串或者没有单引号包住的字符串表达式。
+      (2)array- CSS列表。 (3)object-键是CSS类，值是表达式。
+    </li>
+    <li>除了ng-class也可通过属性赋值，形式如[class.类名]="表达式"</li>
+  </ol>
+</figure>
+<figure>
+  <h5>运行结果</h5>
+  <div>
+    <span [ngClass]="flag?'blue':'red'">ngClass string express</span><br />
+    <span [ngClass]="{'blue':flag}">ngClass object express</span><br />
+    <span [class.yellow]="flag">class property style</span><br />
+    <input type="button" value="change class" (click)="change()" />
+  </div>
+</figure>

@@ -1,0 +1,22 @@
+<figure>
+  <h5>笔记</h5>
+  <ol>
+    <li>
+      一般在点击事件里使用(click)="事件名($event)"，而如何自定义事件，我们使用@Output
+    </li>
+    <li>
+      @Output和@Input是两个装饰器，是Angular专门用来实现跨组件通讯，双向绑定等操作所用的。
+      如果父组件需要把数据传给子组件，则需要使用@Input，如果子组件需要把数据传给父组件，则需要使用@Output
+    </li>
+    <li>@Output一般使用EventEmitter类型传递数据</li>
+  </ol>
+</figure>
+<figure>
+  <h5>运行结果</h5>
+  <div>
+    <div *ngIf="message!=null">
+      receive message:{{message}}
+    </div>
+    <sub-comp (messageEvent)="messageGot($event)"></sub-comp>
+  </div>
+</figure>

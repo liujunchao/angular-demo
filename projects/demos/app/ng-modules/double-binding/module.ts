@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { DemoComponent, WeekViewComponent } from './component';
+import { DemoComponent, CalendarTodayDirective } from './component';
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild([{ path: '', component: DemoComponent }])
   ],
-  declarations: [DemoComponent, WeekViewComponent],
+  declarations: [DemoComponent, CalendarTodayDirective],
   exports: [DemoComponent]
 })
 export class DemoModule {}

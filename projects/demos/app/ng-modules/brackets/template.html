@@ -1,8 +1,30 @@
- 
-<section>
-    程序执行
-</section>
-<p>
-    <code>{{view}}</code>
-</p>
-
+<figure>
+  <h5>笔记</h5>
+  <ol>
+    <li>双花括号表示插值</li>
+    <li>可用中括号设置表达式动态修改组件的属性值（包括数组，事件，模板）</li>
+  </ol>
+</figure>
+<figure>
+  <h5>运行结果</h5>
+  <span [style.color]="mycolor">
+    {{view}}
+  </span>
+  <input type="button" value="change color" (click)="changeColor()" />
+  <hr />
+  <div>
+    修改另一个组件的属性
+    <input
+      type="button"
+      value="change component property"
+      (click)="changeWeekday()"
+    />
+    <mwl-calendar-week-view
+      [weekday]="day"
+      [customTemplate]="newTemplate"
+    ></mwl-calendar-week-view>
+  </div>
+</figure>
+<ng-template #newTemplate let-weekday="weekday">
+  what a new day! <strong>{{weekday}}</strong>
+</ng-template>

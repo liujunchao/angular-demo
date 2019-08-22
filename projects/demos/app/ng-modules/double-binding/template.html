@@ -1,0 +1,26 @@
+<figure>
+  <h5>笔记</h5>
+  <ol>
+    <li>
+      angular有[(ngModel)]可为输入框设置双向绑定，
+      但我们可能需要为一些特殊的组件比如按钮，列表之类的设置双向绑定,angular为提供了@input和@output的机制
+    </li>
+    <li>
+      angular自定义双向绑定规则分输入和输出。输入的形式是`@input
+      propertyName:PropertyType`， 输出的形式是`@output
+      propertyNameChange:EventEmitter&lt;PropertyType&gt;= new EventEmitter()`
+    </li>
+  </ol>
+</figure>
+<figure>
+  <h5>运行结果</h5>
+  <div>
+    日期:{{mydate}}
+    <input
+      type="button"
+      value="今天日期"
+      mwlCalendarToday
+      [(viewDate)]="mydate"
+    />
+  </div>
+</figure>

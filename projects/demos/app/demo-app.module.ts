@@ -13,7 +13,7 @@ import {
 import { Angulartics2Module } from 'angulartics2';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { DragAndDropModule } from 'angular-draggable-droppable';
-import { DemoAppComponent } from './demo-app.component'; 
+import { DemoAppComponent } from './demo-app.component';
 import { environment } from '../environments/environment';
 import { CustomHammerConfig } from './hammer-config';
 import { FormsModule } from '@angular/forms';
@@ -35,17 +35,15 @@ import { ClipboardModule } from 'ngx-clipboard';
     PerfectScrollbarModule,
     ClipboardModule,
     RouterModule.forRoot(
-      [ 
+      [
         {
           path: 'brackets',
           loadChildren: () =>
-            import('./ng-modules/brackets/module').then(
-              m => m.DemoModule
-            ),
+            import('./ng-modules/brackets/module').then(m => m.DemoModule),
           data: {
             label: 'brackets'
           }
-        }, 
+        },
         {
           path: 'ng-template-outlet',
           loadChildren: () =>
@@ -55,7 +53,49 @@ import { ClipboardModule } from 'ngx-clipboard';
           data: {
             label: 'ng-template-outlet'
           }
-        }, 
+        },
+        {
+          path: 'output',
+          loadChildren: () =>
+            import('./ng-modules/output/module').then(m => m.DemoModule),
+          data: {
+            label: 'output'
+          }
+        },
+        {
+          path: 'double-binding',
+          loadChildren: () =>
+            import('./ng-modules/double-binding/module').then(
+              m => m.DemoModule
+            ),
+          data: {
+            label: 'double-binding'
+          }
+        },
+        {
+          path: 'class',
+          loadChildren: () =>
+            import('./ng-modules/class/module').then(m => m.DemoModule),
+          data: {
+            label: 'class'
+          }
+        },
+        {
+          path: 'inject',
+          loadChildren: () =>
+            import('./ng-modules/inject/module').then(m => m.DemoModule),
+          data: {
+            label: 'inject'
+          }
+        },
+        {
+          path: 'observable',
+          loadChildren: () =>
+            import('./ng-modules/observable/module').then(m => m.DemoModule),
+          data: {
+            label: 'observable'
+          }
+        },
         {
           path: '**',
           redirectTo: 'brackets'

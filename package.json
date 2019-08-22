@@ -1,18 +1,18 @@
 {
-  "name": "angular-calendar",
+  "name": "angular-demo",
   "version": "0.27.18",
-  "description": "A calendar component for angular 6.0+ that can display events on a month, week or day view",
+  "description": "angular demo pages",
   "scripts": {
     "start": "ng serve",
-    "build:copy-package-json": "copyfiles package.json projects/angular-calendar",
-    "build:lib": "ng build angular-calendar",
+    "build:copy-package-json": "copyfiles package.json projects/angular-demo",
+    "build:lib": "ng build angular-demo",
     "build:date-adapters": "tsc -p tsconfig-date-adapters.json",
-    "build:styles": "node-sass projects/angular-calendar/src/angular-calendar.scss | postcss --output dist/angular-calendar/css/angular-calendar.css",
+    "build:styles": "node-sass projects/angular-demo/src/angular-demo.scss | postcss --output dist/angular-demo/css/angular-demo.css",
     "build:clean": "del-cli dist",
-    "build:copyfiles": "copyfiles CHANGELOG.md README.md LICENSE dist/angular-calendar & cp-cli projects/angular-calendar/util/date-adapter-package.json dist/angular-calendar/date-adapters/date-fns/package.json & cp-cli projects/angular-calendar/util/date-adapter-package.json dist/angular-calendar/date-adapters/moment/package.json & copyfiles -u 3 projects/angular-calendar/src/**/*.scss dist/angular-calendar/scss",
+    "build:copyfiles": "copyfiles CHANGELOG.md README.md LICENSE dist/angular-demo & cp-cli projects/angular-demo/util/date-adapter-package.json dist/angular-demo/date-adapters/date-fns/package.json & cp-cli projects/angular-demo/util/date-adapter-package.json dist/angular-demo/date-adapters/moment/package.json & copyfiles -u 3 projects/angular-demo/src/**/*.scss dist/angular-demo/scss",
     "build": "run-s build:copy-package-json build:lib build:date-adapters build:styles build:copyfiles",
-    "test:single": "cross-env TZ=UTC ng test angular-calendar --watch=false --code-coverage",
-    "test:watch": "cross-env TZ=UTC ng test angular-calendar",
+    "test:single": "cross-env TZ=UTC ng test angular-demo --watch=false --code-coverage",
+    "test:watch": "cross-env TZ=UTC ng test angular-demo",
     "test": "run-s lint test:single build build:clean",
     "lint:styles": "stylelint \"{projects,src}/**/*.scss\" --fix",
     "lint:ts": "ng lint",
@@ -25,7 +25,7 @@
     "release:git-changelog": "standard-version --first-release",
     "release:git-push": "git push --follow-tags origin master",
     "release:git": "run-s release:git-add release:git-commit release:git-changelog release:git-push",
-    "release:npm-publish": "npm publish dist/angular-calendar",
+    "release:npm-publish": "npm publish dist/angular-demo",
     "release:npm": "run-s build release:npm-publish",
     "release": "run-s release:git release:npm",
     "postrelease": "npm run gh-pages",
@@ -43,13 +43,23 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  }, 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattlewis92/angular-demo.git"
+  },
   "keywords": [
-    "angular", 
-    "demo"
+    "angular",
+    "angular2",
+    "angular6",
+    "calendar"
   ],
-  "author": "jimmy",
-  "license": "MIT", 
+  "author": "Matt Lewis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattlewis92/angular-demo/issues"
+  },
+  "homepage": "https://github.com/mattlewis92/angular-demo#readme",
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.802.2",
     "@angular-devkit/build-ng-packagr": "^0.802.2",
