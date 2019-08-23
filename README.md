@@ -8,6 +8,7 @@ https://github.com/liujunchao/angular-demo
 ## About
 
 angular demo pages useful for learning angular syntax.
+![](http://blog.chaoyiyi.cn/screen.png)
 
 ## Getting started
 
