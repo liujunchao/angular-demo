@@ -194,7 +194,7 @@ platformBrowserDynamic().bootstrapModule(BootstrapModule).then(ref => {
 
     StackBlitzSDK.openProject(
       {
-        title: 'Angular Calendar Demo',
+        title: 'Angular Demo',
         description: demo.label,
         template: 'angular-cli',
         tags: ['angular-calendar'],

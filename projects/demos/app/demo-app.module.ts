@@ -41,7 +41,7 @@ import { ClipboardModule } from 'ngx-clipboard';
           loadChildren: () =>
             import('./ng-modules/brackets/module').then(m => m.DemoModule),
           data: {
-            label: 'brackets'
+            label: '属性修改'
           }
         },
         {
@@ -51,7 +51,7 @@ import { ClipboardModule } from 'ngx-clipboard';
               m => m.DemoModule
             ),
           data: {
-            label: 'ng-template-outlet'
+            label: '模板'
           }
         },
         {
@@ -59,7 +59,7 @@ import { ClipboardModule } from 'ngx-clipboard';
           loadChildren: () =>
             import('./ng-modules/output/module').then(m => m.DemoModule),
           data: {
-            label: 'output'
+            label: '输出'
           }
         },
         {
@@ -69,7 +69,17 @@ import { ClipboardModule } from 'ngx-clipboard';
               m => m.DemoModule
             ),
           data: {
-            label: 'double-binding'
+            label: '双向绑定'
+          }
+        },
+        {
+          path: 'directive',
+          loadChildren: () =>
+            import('./ng-modules/directive/module').then(
+              m => m.DemoModule
+            ),
+          data: {
+            label: '标签中常用的几个功能'
           }
         },
         {
@@ -77,7 +87,7 @@ import { ClipboardModule } from 'ngx-clipboard';
           loadChildren: () =>
             import('./ng-modules/class/module').then(m => m.DemoModule),
           data: {
-            label: 'class'
+            label: '样式修改'
           }
         },
         {
@@ -85,7 +95,7 @@ import { ClipboardModule } from 'ngx-clipboard';
           loadChildren: () =>
             import('./ng-modules/inject/module').then(m => m.DemoModule),
           data: {
-            label: 'inject'
+            label: '依赖注入'
           }
         },
         {
@@ -93,7 +103,7 @@ import { ClipboardModule } from 'ngx-clipboard';
           loadChildren: () =>
             import('./ng-modules/observable/module').then(m => m.DemoModule),
           data: {
-            label: 'observable'
+            label: 'rxjs'
           }
         },
         {
