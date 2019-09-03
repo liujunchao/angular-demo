@@ -1,16 +1,4 @@
-<figure>
-  <h5>笔记</h5>
-  <ol>
-    <li>ng-template的ID #name页面唯一</li>
-    <li>
-      ng-template的属性设置模式为
-      let-propertyName="propertyInContext"，其属性值必须在context中可以找到，属性值可以是事件，比如function
-      或EventEmitter
-    </li>
-  </ol>
-</figure>
-<figure>
-  <h5>运行结果</h5>
+<section>
   <ng-container *ngTemplateOutlet="greet"></ng-container>
   <br />
   <ng-container *ngTemplateOutlet="eng; context: myContext"></ng-container>
@@ -18,33 +6,19 @@
   <ng-container *ngTemplateOutlet="svk; context: myContext"></ng-container>
   <br />
 
-  <ng-container
-    *ngTemplateOutlet="programmer;context:anotherContext"
-  ></ng-container>
+  <ng-container *ngTemplateOutlet="programmer;context:anotherContext"></ng-container>
   <br />
   <ng-template #greet><span>Hello</span></ng-template>
   <ng-template #eng let-name><span>Hello {{name}}!</span></ng-template>
-  <ng-template #svk let-person="localSk"
-    ><span>Ahoj {{person}}!</span></ng-template
-  >
-  <ng-template
-    #programmer
-    let-programmer="name"
-    let-salary="income"
-    let-skills="skills"
-    let-eventClicked="eventClicked"
-    let-eventEmitter="emitter"
-  >
+  <ng-template #svk let-person="localSk"><span>Ahoj {{person}}!</span></ng-template>
+  <ng-template #programmer let-programmer="name" let-salary="income" let-skills="skills" let-eventClicked="eventClicked"
+    let-eventEmitter="emitter">
     <span>welcome {{programmer}}, your salary is {{salary}},</span>
     I have many skills,such as
     <span *ngFor="let skill of skills">
       {{skill}}
     </span>
     <input type="button" value="say hi" (click)="eventClicked()" />&nbsp;
-    <input
-      type="button"
-      value="say hello world"
-      (click)="eventEmitter.emit()"
-    />
+    <input type="button" value="say hello world" (click)="eventEmitter.emit()" />
   </ng-template>
-</figure>
+</section>

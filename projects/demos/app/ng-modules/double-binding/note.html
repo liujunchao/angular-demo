@@ -1,0 +1,21 @@
+<div style="margin: 10px">
+  <img alt="数据绑定" src="https://www.runoob.com/wp-content/uploads/2016/09/databinding.png" />
+</div>
+<ol>
+  <li>双向绑定是指DOM跟Component的数据跟行为的绑定。如上图。</li>
+  <li>
+    angular有[(ngModel)]可为输入框设置双向绑定，
+    但我们可能需要为一些特殊的组件比如按钮，列表之类的设置双向绑定,angular提供了@input和@output的机制
+  </li>
+  <li>
+    angular自定义双向绑定规则分输入和输出。输入的形式是`@input
+    propertyName:PropertyType`， 输出的形式是`@output
+    propertyNameChange:EventEmitter&lt;PropertyType&gt;= new EventEmitter()`
+  </li>
+</ol>
+
+<div class="alert alert-info" role="alert">
+  <a href="#" class="alert-link">
+    示例：通过标签为按钮设置双向绑定的属性
+  </a>
+</div>

@@ -1,12 +1,5 @@
-<figure>
-  <h5>笔记</h5>
-  <ol>
-    <li>双花括号表示插值</li>
-    <li>可用中括号设置表达式动态修改组件的属性值（包括数组，事件，模板）</li>
-  </ol>
-</figure>
-<figure>
-  <h5>运行结果</h5>
+
+<section> 
   <span [style.color]="mycolor">
     {{view}}
   </span>
@@ -24,7 +17,7 @@
       [customTemplate]="newTemplate"
     ></mwl-calendar-week-view>
   </div>
-</figure>
+</section>
 <ng-template #newTemplate let-weekday="weekday">
   what a new day! <strong>{{weekday}}</strong>
 </ng-template>

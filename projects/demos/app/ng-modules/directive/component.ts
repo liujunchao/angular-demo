@@ -28,26 +28,6 @@ export class ColorfulClickDirective{
 
 }
 
-
-@Directive({
-  selector:"[sum]"
-})
-export class SumDirective implements OnInit {
-  
-
-  constructor(private element:ElementRef<HTMLInputElement>,private render:Renderer2,private zone:NgZone){ 
-     
-  } 
-
-  @Input() value; 
-
-  ngOnInit(){
-    //if(this.value)
-  }
-
-}
-
-
 @Component({
   selector: 'ng-demo-component',
   templateUrl: 'template.html'

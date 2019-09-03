@@ -86,6 +86,7 @@ export class DemoAppComponent implements OnInit {
   demos: Demo[] = [];
   filteredDemos: Demo[] = [];
   activeDemo: Demo;
+  note:Source;
   isMenuVisible = false;
   firstDemoLoaded = false;
   searchText = '';
@@ -130,6 +131,9 @@ export class DemoAppComponent implements OnInit {
           demo => `/${demo.path}` === event.url
         );
         this.activeDemo.sources = await getSources(this.activeDemo.path);
+        
+        this.note = this.activeDemo.sources.find(obj=>obj.filename === "note.html");
+        this.activeDemo.sources = this.activeDemo.sources.filter(obj=>obj.filename !== "note.html");
       });
   }
 

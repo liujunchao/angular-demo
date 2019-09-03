@@ -1,16 +1,24 @@
 export const sources = [
   {
+    filename: 'template.html',
+    contents: {
+      raw: require('!!raw-loader!./template.html'),
+      highlighted: require('!!raw-loader!highlightjs-loader?lang=xml!./template.html')
+    }
+  },
+  {
     filename: 'component.ts',
     contents: {
       raw: require('!!raw-loader!./component'),
       highlighted: require('!!raw-loader!highlightjs-loader?lang=typescript!./component')
     }
   },
+
   {
-    filename: 'template.html',
+    filename: 'note.html',
     contents: {
-      raw: require('!!raw-loader!./template.html'),
-      highlighted: require('!!raw-loader!highlightjs-loader?lang=xml!./template.html')
+      raw: require('!!raw-loader!./note.html'),
+      highlighted: require('!!raw-loader!highlightjs-loader?lang=xml!./note.html')
     }
   },
   {

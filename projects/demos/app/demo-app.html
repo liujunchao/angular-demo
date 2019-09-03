@@ -111,13 +111,16 @@
           </div>
         </div>
         <div class="card-body">
+            <section [innerHTML]="note?.contents.raw"></section>
           <ngb-tabset [destroyOnHide]="false">
             <ngb-tab>
               <ng-template ngbTabTitle>
                 <i class="fa fa-fw fa-laptop"></i> Live demo
               </ng-template>
               <ng-template ngbTabContent>
-                <div class="spacer-top"><router-outlet></router-outlet></div>
+                <pre>
+                  <router-outlet></router-outlet>
+                </pre>
               </ng-template>
             </ngb-tab>
 

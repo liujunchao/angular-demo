@@ -1,0 +1,10 @@
+<ol>
+  <li>HostBinding和HostListener。HostBinding可使标签的属性绑定DOM的属性。HostListener可使标签的事件绑定DOM的原生事件。</li>
+  <li>angular 提供了DOM操作的抽象层接口，即Renderer2。其封装了不同浏览器平台操作DOM的细节，支持跨平台，可以理解成angular中的jquery。</li>
+  <li>ElementRef依赖注入，其是DOM元素的引用，一般通过其属性nativeElement访问DOM，搭配Renderer2，可使用于经常直接访问DOM的场景。</li>
+</ol>
+<div class="alert alert-info" role="alert">
+  <a href="#" class="alert-link">
+    示例：创建了一个标签，点击后能改变颜色同时记录点击次数
+  </a>
+</div>
