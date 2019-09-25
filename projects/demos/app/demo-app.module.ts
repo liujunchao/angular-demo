@@ -107,6 +107,22 @@ import { ClipboardModule } from 'ngx-clipboard';
           }
         },
         {
+          path: 'overlay',
+          loadChildren: () =>
+            import('./ng-modules/overlay/module').then(m => m.DemoModule),
+          data: {
+            label: 'overlay'
+          }
+        },
+        {
+          path: 'animation',
+          loadChildren: () =>
+            import('./ng-modules/animation/module').then(m => m.DemoModule),
+          data: {
+            label: 'animation'
+          }
+        },
+        {
           path: '**',
           redirectTo: 'brackets'
         }

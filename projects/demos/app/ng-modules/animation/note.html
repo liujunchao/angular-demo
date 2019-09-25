@@ -1,8 +1,12 @@
 <ol>
   <li>
-    我们使用ng-class定义类的样式，有三种形式：
-    (1)string-有单引号包住并以空格隔开的类名列表串或者没有单引号包住的字符串表达式。
-    (2)array- CSS列表。 (3)object-键是CSS类，值是表达式。
+    Angular Animation简单来说 就是状态和状态之间的转场效果。每一种状态对应一种样式(style)。
+    Angular Animation指导从一种状态的样式过渡到另一种状态的样式效果过程。
   </li>
-  <li>除了ng-class也可通过属性赋值，形式如[class.类名]="表达式"</li>
+  <li>使用动画，有一个前提条件，得先引入BrowserAnimationsModule模块。建议在app module里面引入。</li>
+  <li>
+    trigger触发器，trigger将根据提供的triggerName值创建一个动画触发器。
+    在模板中使用[@triggerName]语法来把它附加到一个或多个元素上去。
+    可以简单的理解为这个时候就把元素和触发器对应的动画绑定起来了。
+  </li>
 </ol>

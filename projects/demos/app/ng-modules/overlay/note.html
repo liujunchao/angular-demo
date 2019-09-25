@@ -1,0 +1,24 @@
+<ol>
+  <li>
+    Overlay的使用也很简单，关键在两个地方：位置策略、滑动策略。
+    一个处理overlay的显示位置，一个处理有滑动的时候overlay的动作。
+  </li> 
+  <li>
+    位置策略(PositionStrategy)：用来确定overlay在页面中的显示位置。
+    overlay里面提供了OverlayPositionBuilder类来构建PositionStrategy。
+    overlay也给我们提供了三种PositionStrategy：
+    GlobalPositionStrategy、ConnectedPositionStrategy和FlexibleConnectedPositionStrategy。
+  </li>
+  <li>
+    滑动策略(ScrollStrategy)：当PositionStrategy是ConnectedPositionStrategy或者
+    FlexibleConnectedPositionStrategy的时候，如果overlay依赖的控件位置改变的时候overlay的位置应该怎么变化。
+    overlay里面通过ScrollStrategyOptions来创建ScrollStrategy。
+    同样overlay里面也给我们提供了四种ScrollStrategy：
+    NoopScrollStrategy、CloseScrollStrategy、BlockScrollStrategy和RepositionScrollStrategy。
+  </li>
+</ol>
+<div class="alert alert-info" role="alert">
+  <a href="#" class="alert-link">
+    示例:overlay的几种用法
+  </a>
+</div>

@@ -1,7 +1,17 @@
- 
-  <div>
-    <span [ngClass]="flag?'blue':'red'">ngClass string express</span><br />
-    <span [ngClass]="{'blue':flag}">ngClass object express</span><br />
-    <span [class.yellow]="flag">class property style</span><br />
-    <input type="button" value="change class" (click)="change()" />
-  </div> 
+ <div>
+   <br/>
+   <h5>keyframes关键帧多阶段动画</h5>
+   <input type="button" value="进场或离场" (click)="isVisible = !isVisible" />
+   <br/>
+   <br/>
+    <div *ngIf="isVisible" style="width: 200px; height: 200px;background-color: #67ee38" [@flyInOut]>
+    </div>
+   <br/> 
+<!-- 
+   <div  *ngIf="isVisible" [@queryAnimation]>
+    <h1>这是主标题</h1>
+    <p>
+      这是正文
+    </p>
+   </div> -->
+ </div>
