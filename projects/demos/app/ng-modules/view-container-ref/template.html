@@ -1,0 +1,27 @@
+<input type="button" value="toggle show {{show}}" (click)="show=!show"/>    
+<br/>
+
+<h4>使用myIf</h4>
+<div *myIf="show;then tpl;else tpl2;finally tpl3">
+    一段文本，如果有then会被忽略
+</div>
+  
+<hr/>
+<h4>使用ngIf</h4>
+<div *ngIf="show;then tpl;else tpl2">
+    一段文本，如果有then会被忽略
+</div>
+
+
+<ng-template #tpl>
+    我是模板文本then部分
+</ng-template>
+
+<ng-template #tpl2>
+    我是模板文本else部分
+</ng-template>
+
+
+ <ng-template #tpl3>
+    我是模板文本finally部分
+</ng-template> 

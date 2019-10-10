@@ -1,0 +1,1 @@
+export type TooltipTrigger = 'click' | 'focus' | 'hover' | null;

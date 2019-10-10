@@ -168,7 +168,7 @@ export class CdkOverlayComponent {
                 originY: 'bottom',
                 overlayX: 'center',
                 overlayY: 'top',
-                offsetX: 100,
+                offsetX: 0,
                 offsetY: 0
             }]); // 这么理解 origin 组件(依附空组件) 的那个点(originX, originY) 和 overlay组件的点(overlayX, overlayY)
         // 重合，从而确定overlay组件显示的位置

@@ -123,6 +123,22 @@ import { ClipboardModule } from 'ngx-clipboard';
           }
         },
         {
+          path: 'view-container-ref',
+          loadChildren: () =>
+            import('./ng-modules/view-container-ref/module').then(m => m.DemoModule),
+          data: {
+            label: 'ViewContainerRef'
+          }
+        },
+        {
+          path: 'popover',
+          loadChildren: () =>
+            import('./ng-modules/popover/module').then(m => m.DemoModule),
+          data: {
+            label: 'popover'
+          }
+        },
+        {
           path: '**',
           redirectTo: 'brackets'
         }

@@ -1,0 +1,54 @@
+ 
+  <div> 
+    <input 
+      type="button" 
+      value="popover" 
+      popover 
+      [popoverContent]="contentTemplate"
+      [popoverTitle]="titleTemplate"
+      [popoverPlacement]="placement"
+      [popoverTrigger]="trigger"
+      [(popoverVisible)]="visible"
+      style="margin-left: 200px"
+    />
+{{visible}}
+    <div style="margin-left: 500px">
+       <div>
+          <input type="button" value="topLeft" style="margin-left:10px " (click)="placement='topLeft'" />
+          <input type="button" value="top" style="margin-left:10px " (click)="placement='top'" />
+          <input type="button" value="topRight" style="margin-left:10px " (click)="placement='topRight'" />
+       </div>
+       <div style="margin-top: 20px"> 
+          <input type="button" value="leftTop" style="margin-left:10px " (click)="placement='leftTop'" />
+          <input type="button" value="left" style="margin-left:10px " (click)="placement='left'" />
+          <input type="button" value="leftBottom" style="margin-left:10px " (click)="placement='leftBottom'" />
+       </div>
+        <div style="margin-top: 20px">
+            <input type="button" value="rightTop" style="margin-left:10px " (click)="placement='rightTop'" />
+            <input type="button" value="right" style="margin-left:10px " (click)="placement='right'" />
+            <input type="button" value="rightBottom" style="margin-left:10px " (click)="placement='rightBottom'" />    
+        </div>
+        <div style="margin-top: 20px">
+          
+            <input type="button" value="bottomLeft" style="margin-left:10px " (click)="placement='bottomLeft'" />
+            <input type="button" value="bottom" style="margin-left:10px " (click)="placement='bottom'" />
+            <input type="button" value="bottomRight" style="margin-left:10px " (click)="placement='bottomRight'" />
+        </div>
+    </div>
+  </div> 
+
+  <ng-template #contentTemplate>
+    <a>
+      <div>这是内容模板 {{placement}} {{value}}</div>
+      <div style="color: orange ; width: 200px">
+          I'm trying to use th 
+       </div>
+      <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png"/>
+      <input type="button" value="hide" (click)="visible=false;value = 'ed'"/>
+    </a>
+  </ng-template>
+
+  <ng-template #titleTemplate>
+      <a>这是标题模板</a>
+    </ng-template>
+  
