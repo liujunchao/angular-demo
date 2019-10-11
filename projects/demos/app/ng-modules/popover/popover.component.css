@@ -190,7 +190,26 @@
 
 .close{
     position: absolute;
-    right: 3px;
-    top:8px;
-    cursor:pointer
+    right: 0px;
+    cursor:pointer;
+    margin: 4px;
 }
+
+.ant-popover-placement-leftBottom .close{
+    margin-right: 11px;
+}
+
+.ant-popover-placement-left .close{
+    margin-right: 11px;
+}
+
+.ant-popover-placement-leftTop .close{
+    margin-right: 11px;
+}
+
+
+.close:hover{
+    transition: transform 2s;
+    
+    transform: rotate(180deg); 
+} 

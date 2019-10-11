@@ -99,11 +99,9 @@ import {
         return true;
       }
     }
-  
-    // tslint:disable-next-line:no-any
+    
     private updateExistingContext(ctx: any): void {
       for (const propName of Object.keys(ctx)) {
-        // tslint:disable-next-line:no-any
         (this.inputViewRef!.context as any)[propName] = this.stringTemplateOutletContext[propName];
       }
     }
