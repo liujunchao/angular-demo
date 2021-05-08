@@ -104,7 +104,7 @@
     "mocha": "^6.2.0",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.26",
-    "ng-packagr": "^5.5.0",
+    "ng-packagr": "^10.1.1",
     "ngx-clipboard": "^12.2.0",
     "ngx-contextmenu": "^5.2.0",
     "ngx-perfect-scrollbar": "^8.0.0",
